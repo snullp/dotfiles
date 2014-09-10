@@ -1,5 +1,7 @@
 #!/bin/sh
 
+free -m
+
 sensors
 
 for f in `ls /dev/sd?`
