@@ -13,12 +13,12 @@ echo "Vim?"
 read  yn
 if [ "$yn" = "y" ]; then
 sudo apt-get install vim
-echo "EDITOR = vim" >> ~/.bashrc
+echo "export EDITOR=vim" >> ~/.bashrc
 curl https://raw.githubusercontent.com/snullp/dotfiles/master/vimrc -o ~/.vimrc
 fi
 
 echo "Bash PS1?"
 read  yn
 if [ "$yn" = "y" ]; then
-echo "PS1 = !!!!!!!!" >> ~/.bashrc
+echo "export PS1=\"\[\e[00;37m\][\$?]\[\e[0m\]\[\e[00;33m\]\u\[\e[0m\]\[\e[00;37m\]@\h \[\e[0m\]\[\e[00;36m\]\w\[\e[0m\]\[\e[00;37m\] \t>\n\\$\[\e[0m\]\"" >> ~/.bashrc
 fi
