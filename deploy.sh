@@ -20,5 +20,5 @@ fi
 echo "Bash PS1?"
 read  yn
 if [ "$yn" = "y" ]; then
-echo "export PS1=\"\n<\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j [\A] \w \n\$ \"" >> ~/.bashrc
+echo "export PS1=\"<\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j:\$? [\A] \w \\n\$ \"" >> ~/.bashrc
 fi
