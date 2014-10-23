@@ -20,5 +20,12 @@ fi
 echo "Bash PS1?"
 read  yn
 if [ "$yn" = "y" ]; then
-echo "export PS1=\"<\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j:\$? [\A] \w \\n\$ \"" >> ~/.bashrc
+    cat >>~/.bashrc <<"EOF"
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    HOSTCOLOR=31
+else
+    HOSTCOLOR=32
+fi
+export PS1="<\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j:\$? [\A] \w \n\$ "
+EOF
 fi
