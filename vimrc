@@ -41,3 +41,6 @@ set cursorline
 " treat long lines as break lines
 map j gj
 map k gk
+
+" resume position when reopen
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
