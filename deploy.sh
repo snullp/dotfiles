@@ -26,6 +26,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 else
     HOSTCOLOR=32
 fi
-export PS1="<\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j:\$? [\A] \w \n\$ "
+export PS1="<\[\033[0;${HOSTCOLOR}m\]\h\[\033[0m\]:\[\033[0;37m\]\u\[\033[0m\]> \j:\$? [\A] \w \n\$ "
 EOF
 fi
