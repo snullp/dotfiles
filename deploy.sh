@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt-get install curl
+
 echo "Pub Key?"
 read  yn
 if [ "$yn" = "y" ]; then
